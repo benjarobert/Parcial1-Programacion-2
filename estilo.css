@@ -1,84 +1,109 @@
-/* ESTILOS DE LA GALERÍA */
+
 .Galeria {
-    display: flex; /* Activa Flexbox para alinear elementos fácilmente */
-    flex-wrap: wrap; /* Si no hay espacio, las tarjetas bajan a la siguiente línea */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
-    gap: 30px; /* Espacio de separación entre tarjeta y tarjeta */
-    padding: 30px; /* Espacio interno dentro de la sección completa */
-    background-color: aquamarine; /* Color de fondo */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
+    padding: 30px; 
+    background-color: aquamarine; 
 }
 
-/* ESTILOS DEL MENÚ DE NAVEGACIÓN */
+
 .Menu {
-    color: aqua;
+    background-color: aqua;
     display: flex;
-    flex-direction: column; /* Pone los elementos uno debajo del otro */
-    align-items: center; /* Los centra en la pantalla */
+    flex-direction: column; 
+    align-items: center; 
+    font-family: 'Times New Roman', Times, serif;
 }
 .Menu a:hover {
     color: rgb(98, 255, 0);
 }
 
-/* ESTILOS DE CADA TARJETA INDIVIDUAL */
+
 .tarjeta {
-    transition: 0.3s; /* Suaviza el efecto hover */
-    background-color: white; /* Para que resalte sobre el fondo aguamarina */
+    transition: 0.3s; 
+    background-color: white; 
     padding-bottom: 10px;
     border-radius: 10px;
     text-align: center;
 }
 
-/* EFECTO AL PASAR EL MOUSE POR LA TARJETA */
+
 .tarjeta:hover {
-    transform: scale(1.05); /* Agranda la tarjeta un 5% cuando le pasás el mouse por arriba */
+    transform: scale(1.05); 
 }
 
-/* ESTILOS DE LAS IMÁGENES DENTRO DE LA TARJETA */
+
 .tarjeta img {
-    width: 100%; /* La imagen ocupa todo el ancho de su tarjeta */
-    height: 200px; /* Altura fija para que todas las imágenes se vean parejas */
-    max-width: 100%; /* Evita que la imagen se desborde */
-    object-fit: cover; /* Recorta la imagen para que llene el cuadro sin deformarse */
-    border-top-left-radius: 10px; /* Redondea solo las esquinas de arriba */
+    width: 100%; 
+    height: 200px; 
+    max-width: 100%; 
+    object-fit: cover; 
+    border-top-left-radius: 10px; 
     border-top-right-radius: 10px;
 }
 
-/* ESTILOS DEL FORMULARIO DE CONTACTO */
+
 .Formulario {
-    width: 400px; /* Ancho fijo del formulario */
-    margin: auto; /* Centra el formulario en la pantalla */
-    display: flex; /* Activa Flexbox adentro del formulario */
-    flex-direction: column; /* Pone los inputs uno debajo del otro */
-    gap: 15px;  /* Espacio de separación entre los inputs */
-    background-color: white; /* Color de fondo del formulario */
-    padding: 30px; /* Espacio interno del formulario */
-    border-radius: 15px; /* Redondea los bordes del formulario completo */
-    box-shadow: 0 0 15px gray; /* Le da una sombra gris alrededor */
+    width: 400px; 
+    margin: auto; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px;  
+    background-color: white; 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 0 15px gray; 
+    font-family: 'Times New Roman', Times, serif;
 }
 
-/* ESTILOS DE LAS CAJAS DE TEXTO DEL FORMULARIO */
+
 .Formulario input {
-    padding: 12px;  /* Espacio interno para que el texto no esté pegado al borde */
-    border-radius: 10px; /* Bordes redondeados en las cajitas */
-    border: 1px solid rgb(224, 19, 19); /* Borde de color rojo */
-    font-size: 16px; /* Tamaño de la letra que el usuario escribe */
+    padding: 12px;  
+    border-radius: 10px; 
+    border: 1px solid rgb(224, 19, 19); 
+    font-size: 16px; 
+    font-family: 'Times New Roman', Times, serif;
 }
 
-/* ESTILOS DEL BOTÓN DE ENVIAR */
+
 .Formulario button {
-    background-color: rgb(21, 239, 21); /* Color verde de fondo */
-    color: white; /* Color blanco de la letra */
-    padding: 12px; /* Tamaño del botón */
-    border: none; /* Le saca el borde feo que viene por defecto */
-    border-radius: 10px; /* Bordes redondeados */
-    cursor: pointer; /* Hace que el mouse se ponga como una manito al pasar por arriba */
-    transition: 0.3s; /* Suaviza el cambio de color al pasar el mouse */
+    background-color: rgb(21, 239, 21); 
+    color: white; 
+    padding: 12px; 
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    font-family: 'Times New Roman', Times, serif;
 }
 
-/* EFECTO AL PASAR EL MOUSE POR EL BOTÓN */
+
 .Formulario button:hover {
-    background-color: rgb(12, 139, 12); /* Se pone de un verde más oscuro */
+    background-color: rgb(12, 139, 12); 
 }
 
+@media (max-width: 768px) {
+
+    .Menu ul {
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .Galeria {
+        flex-direction: column;
+        align-items: center; 
+        padding: 15px; 
+    }
+
+    .tarjeta { 
+        width: 90%; 
+    }
+
+    .Formulario {
+        width: 80%; 
+    }
+}
 
 
